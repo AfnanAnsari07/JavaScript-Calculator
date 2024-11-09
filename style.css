@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input{
+    width: 100%;
+    height: 150px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: left;
+}
+
+.calculator{
+    max-width: 400px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+}
+
+button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    font-size: 25px;
+    background-color: hsl(0, 0%, 30%);
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+
+    &:hover{
+        background-color: hsl(0, 0%, 40%);
+    }
+
+    &:active{
+        background-color: hsl(0, 0%, 50%);
+    }
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.gray{
+    background-color: hsl(0, 0%, 70%);
+    color: black;
+    
+    &:hover{
+        background-color: hsl(0, 0%, 80%);
+    }
+
+    &:active{
+        background-color: hsl(0, 0%, 90%);
+    }
+}
+
+.operator{
+    background-color: hsl(39, 97%, 45%);
+
+    &:hover{
+        background-color: hsl(39, 99%, 45%);
+    }
+
+    &:active{
+        background-color: hsl(39, 99%, 50%);
+    }
+}
+
+.zero{
+    grid-column: 2;
+}
+
+
+@media (max-width : 500px){
+
+    body{
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .calculator{
+        max-width: 350px;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+
+    button{
+        width: 70px;
+        height: 70px;
+    }
+}
